@@ -1,0 +1,149 @@
+html, body {
+  background-color: #151515; /* Fundo escuro */
+  color: lightblue; /* Azul claro */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Fonte Roboto */
+  height: 100vh;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 0;
+  text-align: center;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 25px;
+  color: lightblue; /* Azul claro */
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  width: 90%; /* Largura em porcentagem para responsividade */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thermometer-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thermometer {
+  width: 150px; /* Largura do termômetro */
+  height: 150px; /* Altura do termômetro */
+  background-color: green; /* Cor do termômetro */
+  border-radius: 10px; /* Arredondar bordas */
+  position: relative;
+  overflow: hidden; /* Para não mostrar a parte de fora */
+}
+
+.temperature {
+  font-size: 40px;
+  color: white; /* Cor do texto */
+  font-family: 'Courier New', Courier, monospace; /* Fonte de estilo calculadora */
+  position: absolute;
+  bottom: 10%; /* Ajusta a posição da temperatura */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 100px; /* Tamanho do emoji */
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+:root {
+  --ring-width: 30%;
+  --ring-space: 30%;
+  --accent: #04C5F7;
+}
+
+.knob-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 120px; /* Largura do knob */
+  height: 120px;
+}
+
+.ring {
+  position: absolute;
+  background: conic-gradient(#545C64 140deg, rgba(255, 255, 255, 0.0) 0 220deg, #545C64 0deg);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.ring-fill {
+  position: absolute;
+  background: conic-gradient(var(--accent) 140deg, rgba(255, 255, 255, 0.0) 0 360deg, var(--accent) 0deg);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.space {
+  position: absolute;
+  background-color: #151515; /* Fundo do termômetro */
+  border-radius: 50%;
+  width: calc((100%) - var(--ring-width));
+  height: calc((100%) - var(--ring-width));
+}
+
+.knob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: linear-gradient(#6D757F, #596067);
+  border-radius: 50%;
+  width: calc((100%) - (var(--ring-width) + var(--ring-space)));
+  height: calc((100%) - (var(--ring-width) + var(--ring-space)));
+}
+
+.knob-indicator-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+  height: 100%;
+  transform: rotate(140deg);
+}
+
+.knob-indicator {
+  background: #16181A; /* Cor padrão do indicador */
+  width: 9%; 
+  height: 35%;
+  margin-top: 4%;
+}
+
+.shake {
+  animation: shake 0.5s linear infinite; /* Animação de tremor */
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 0); }
+  50% { transform: translate(2px, 0); }
+  75% { transform: translate(-2px, 0); }
+  100% { transform: translate(0); }
+}

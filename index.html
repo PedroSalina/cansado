@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Termômtro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Jogo do Trmômetro</h1>
+            <h5>Aumente ou diminua a temperatura!</h5>
+        </header>
+        
+        <div class="thermometer-container">
+            <div class="thermometer">
+                <div class="temperature" id="temperature">0°C</div>
+            </div>
+        </div>
+
+        <div id="app">
+            <div class="knob-container" id="knob1">
+                <div class="ring"></div>
+                <div class="ring-fill"></div>
+                <div class="space"></div>
+                <div class="knob">
+                    <div class="knob-indicator-container">
+                        <div class="knob-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result" id="result">
+            <span id="water-emoji">💧</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
