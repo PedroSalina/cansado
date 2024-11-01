@@ -1,9 +1,9 @@
 html, body {
-  background-color: #151515; /* Fundo escuro */
-  color: lightblue; /* Azul claro */
+  background-color: #151515; 
+  color: lightblue;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif; /* Fonte Roboto */
+  font-family: "Roboto", sans-serif; 
   height: 100vh;
 }
 
@@ -16,13 +16,13 @@ h1 {
 h5 {
   font-weight: 400;
   font-size: 25px;
-  color: lightblue; /* Azul claro */
+  color: lightblue;
   margin: 0;
   text-align: center;
 }
 
 .container {
-  width: 90%; /* Largura em porcentagem para responsividade */
+  width: 90%; 
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -37,28 +37,27 @@ h5 {
 }
 
 .thermometer {
-  width: 150px; /* Largura do termômetro */
-  height: 150px; /* Altura do termômetro */
-  background-color: green; /* Cor do termômetro */
-  border-radius: 10px; /* Arredondar bordas */
+  width: 150px; 
+  height: 150px; 
+  background-color: green; 
+  border-radius: 10px; 
   position: relative;
-  overflow: hidden; /* Para não mostrar a parte de fora */
+  overflow: hidden; 
 }
 
 .temperature {
   font-size: 40px;
-  color: white; /* Cor do texto */
-  font-family: 'Courier New', Courier, monospace; /* Fonte de estilo calculadora */
-  position: absolute;
-  bottom: 10%; /* Ajusta a posição da temperatura */
+  color: white; 
+  font-family: 'Courier New', Courier, monospace; 
+  bottom: 10%; 
   left: 50%;
   transform: translateX(-50%);
-  transition: all 0.3s ease; /* Transição suave para mudanças */
+  transition: all 0.3s ease; 
 }
 
 .result {
   margin-top: 20px;
-  font-size: 100px; /* Tamanho do emoji */
+  font-size: 100px; 
   display: flex;
   justify-content: center;
 }
@@ -82,7 +81,7 @@ h5 {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 120px; /* Largura do knob */
+  width: 120px; 
   height: 120px;
 }
 
@@ -104,7 +103,7 @@ h5 {
 
 .space {
   position: absolute;
-  background-color: #151515; /* Fundo do termômetro */
+  background-color: #151515; 
   border-radius: 50%;
   width: calc((100%) - var(--ring-width));
   height: calc((100%) - var(--ring-width));
@@ -130,14 +129,14 @@ h5 {
 }
 
 .knob-indicator {
-  background: #16181A; /* Cor padrão do indicador */
+  background: #16181A;
   width: 9%; 
   height: 35%;
   margin-top: 4%;
 }
 
 .shake {
-  animation: shake 0.5s linear infinite; /* Animação de tremor */
+  animation: shake 0.5s linear infinite; 
 }
 
 @keyframes shake {
